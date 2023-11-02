@@ -1,37 +1,37 @@
 plugins {
-    id 'java'
-    id 'org.springframework.boot' version '3.1.5'
-    id 'io.spring.dependency-management' version '1.1.3'
+    id 'java'  // Java 플러그인을 활성화
+    id 'org.springframework.boot' version '3.1.5'  // Spring Boot 플러그인 버전 지정
+    id 'io.spring.dependency-management' version '1.1.3'  // Spring Dependency Management 플러그인 버전 지정
 }
 
-group = 'join.login'
-version = '0.0.1-SNAPSHOT'
+group = 'join.login'  // 프로젝트 그룹
+version = '0.0.1-SNAPSHOT'  // 프로젝트 버전
 
 java {
-    sourceCompatibility = '17'
+    sourceCompatibility = '17'  // 소스 코드 호환성 설정 (Java 17)
 }
 
 repositories {
-    mavenCentral()
+    mavenCentral()  // Maven 중앙 저장소를 사용하여 종속성을 관리
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
-    implementation 'org.springframework.boot:spring-boot-starter-security'
-    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-    implementation 'org.springframework.boot:spring-boot-starter-validation'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.boot:spring-boot-starter-websocket'
-    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
-    implementation 'io.jsonwebtoken:jjwt:0.9.1'
-    compileOnly 'org.projectlombok:lombok'
-    runtimeOnly 'mysql:mysql-connector-java'
-    annotationProcessor 'org.projectlombok:lombok'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.springframework.security:spring-security-test'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'  // Spring Boot 데이터 JPA 스타터 종속성 추가
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'  // Spring Boot OAuth2 클라이언트 스타터 종속성 추가
+    implementation 'org.springframework.boot:spring-boot-starter-security'  // Spring Boot 보안 스타터 종속성 추가
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'  // Spring Boot Thymeleaf 스타터 종속성 추가
+    implementation 'org.springframework.boot:spring-boot-starter-validation'  // Spring Boot 유효성 검사 스타터 종속성 추가
+    implementation 'org.springframework.boot:spring-boot-starter-web'  // Spring Boot 웹 스타터 종속성 추가
+    implementation 'org.springframework.boot:spring-boot-starter-websocket'  // Spring Boot 웹소켓 스타터 종속성 추가
+    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'  // Thymeleaf Spring Security 확장 종속성 추가
+    implementation 'io.jsonwebtoken:jjwt:0.9.1'  // jjwt 라이브러리 종속성 추가
+    compileOnly 'org.projectlombok:lombok'  // 컴파일 시만 Lombok 종속성 추가
+    runtimeOnly 'mysql:mysql-connector-java'  // MySQL 드라이버 종속성 추가
+    annotationProcessor 'org.projectlombok:lombok'  // Lombok 어노테이션 프로세서 종속성 추가
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'  // 테스트용 Spring Boot 스타터 종속성 추가
+    testImplementation 'org.springframework.security:spring-security-test'  // 테스트용 Spring Security 스타터 종속성 추가
 }
 
 tasks.named('test') {
-    useJUnitPlatform()
+    useJUnitPlatform()  // JUnit 플랫폼을 사용하여 테스트 실행
 }
