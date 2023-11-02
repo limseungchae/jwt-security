@@ -35,4 +35,8 @@ public class Member extends BaseTimeEntity {
     public void encodePassword(PasswordEncoder passwordEncoder) {
         this.password = passwordEncoder.encode(password); // 패스워드 암호화
     }
+
+    public enum Role {
+        USER, ADMIN, MANAGER ; // 유저,관리자,조정자
+    }
 }
