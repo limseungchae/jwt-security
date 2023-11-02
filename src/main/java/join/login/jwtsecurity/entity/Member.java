@@ -31,4 +31,8 @@ public class Member extends BaseTimeEntity {
 
     @Enumerated(EnumType.STRING) // Enum 타입 필드를 문자열로 저장
     private Role role; // 역할 (USER, ADMIN, MODERATOR) 타입
+
+    public void encodePassword(PasswordEncoder passwordEncoder) {
+        this.password = passwordEncoder.encode(password); // 패스워드 암호화
+    }
 }
