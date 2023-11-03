@@ -25,6 +25,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-websocket'  // Spring Boot 웹소켓 스타터 종속성 추가
     implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'  // Thymeleaf Spring Security 확장 종속성 추가
     implementation 'io.jsonwebtoken:jjwt:0.9.1'  // jjwt 라이브러리 종속성 추가
+    implementation 'org.projectlombok:lombok:1.18.28'
     compileOnly 'org.projectlombok:lombok'  // 컴파일 시만 Lombok 종속성 추가
     runtimeOnly 'mysql:mysql-connector-java'  // MySQL 드라이버 종속성 추가
     annotationProcessor 'org.projectlombok:lombok'  // Lombok 어노테이션 프로세서 종속성 추가
